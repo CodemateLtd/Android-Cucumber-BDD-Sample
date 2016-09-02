@@ -1,0 +1,27 @@
+package com.codemate.booklibrary.data;
+
+import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+
+/**
+ * Created by ironman on 02/09/16.
+ */
+public class RandomBookGeneratorTest {
+    @Test
+    public void generatingRandomBooks_ReturnsNonEmptyBookList() {
+        List<Book> books = RandomBookGenerator.randomBooks(15);
+
+        assertEquals(15, books.size());
+
+        for (Book book : books) {
+            assertNotNull(book.getTitle());
+            assertNotNull(book.getAuthor());
+            assertNotEquals(0, book.getPublishDate().getTime());
+        }
+    }
+}
