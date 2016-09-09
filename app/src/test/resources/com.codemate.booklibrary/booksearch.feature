@@ -20,24 +20,24 @@ Feature: Book Search
       And Book 2 should have the title "My life as an awesome guy"
 
   Scenario Outline: Search books by author
-    When the customer searches for books by author <author>
+    When the customer searches for books by author <Author Search>
     Then 2 books should be found
       And Book 1 should have the title "How to be awesome"
       And Book 2 should have the title "My life as an awesome guy"
 
     Examples:
-      | author         |
+      | Author Search  |
       | "Iiro"         |
       | "Krankka"      |
       | "Iiro Krankka" |
 
   Scenario Outline: Search books by title
-    When the customer searches for books with title <searched_title>
-    Then <search_results_count> books should be found
-      And Books should be <search_results>
+    When the customer searches for books with title <Title Search>
+    Then <Number of Results> books should be found
+    And Books should be <Found Books>
 
     Examples:
-      | searched_title | search_results_count | search_results                                      |
+      | Title Search   | Number of Results    | Found Books                                         |
       | "Awesome"      | 2                    | "How to be awesome" and "My life as an awesome guy" |
       | "asshat"       | 1                    | "I think my teacher is an asshat"                   |
       | "How to be"    | 1                    | "How to be awesome"                                 |
