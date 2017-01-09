@@ -1,6 +1,8 @@
 # Behavior-Driven Development with Cucumber
 
-This is a sample Android app that has tests mostly written using the Cucumber framework. The app acts like a library book search, allowing you to search for books by title, author or year.
+![Sample Video](https://raw.githubusercontent.com/CodemateLtd/Android-Cucumber-BDD-Sample/master/art/sample_video.gif)
+
+This is a sample Android app that has BDD-style tests made using the Cucumber framework. The app acts like a library book search, allowing you to search for books by title, author or year.
 
 [Cucumber](https://cucumber.io/) is a BDD testing framework that allows people without programming background write specifications **that can be translated to unit test requirements almost automatically**.
 
