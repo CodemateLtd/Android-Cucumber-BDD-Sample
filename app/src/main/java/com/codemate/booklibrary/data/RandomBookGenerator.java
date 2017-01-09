@@ -8,16 +8,15 @@ import java.util.List;
 public class RandomBookGenerator {
     private static final String[] SUBJECTS = {
             "Chicken", "Pig", "Hippo", "Dinosaur", "Giraffe", "Orangutan",
-            "Bat", "Lion", "Daddy", "Grandpa", "Donald Trump", "Coffee",
-            "Dog", "Rat", "Pokemon", "Cat", "Senile", "Pensioner",
-            "Project manager", "Salesperson"
+            "Bat", "Lion", "Daddy", "Grandpa", "Coffee", "Dog", "Rat",
+            "Pokemon", "Cat", "Pensioner", "Project Manager", "Salesperson"
     };
 
     private static final String[] SECOND_WORDS = {
-            "strip club", "that knew too little", "Strategy", "parking space",
-            "Office", "Banana", "Toilet", "Poop", "Fart", "Rain", "Job",
-            "Thing", "Radio", "Zoo", "Office", "House", "Village",
-            "swimming pool", "Computer"
+            "That Knew Too Little", "Strategy", "Parking Lot",
+            "Office", "Banana", "Toilet", "Rain", "Job", "Thing",
+            "Radio", "Zoo", "Office", "House", "Village", "Swimming Pool",
+            "Computer"
     };
 
     private static final String[] FIRST_NAMES = {
@@ -26,7 +25,7 @@ public class RandomBookGenerator {
     };
 
     private static final String[] LAST_NAMES = {
-            "Doe", "Trump", "Bond", "Jackson", "Jordan", "Young", "Page",
+            "Doe", "Smith", "Bond", "Jackson", "Jordan", "Young", "Page",
             "Johnson", "Springsteen", "Kauffman", "Schmidt", "Jokinen"
     };
 
@@ -72,7 +71,7 @@ public class RandomBookGenerator {
 
     private static Date randomDate() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.YEAR, RandomUtils.randBetween(1995, 2016));
+        calendar.set(Calendar.YEAR, RandomUtils.randBetween(1995, 2017));
         calendar.set(Calendar.MONTH, RandomUtils.randBetween(0, 11));
         calendar.set(Calendar.DAY_OF_MONTH, RandomUtils.randBetween(1, 25));
 
