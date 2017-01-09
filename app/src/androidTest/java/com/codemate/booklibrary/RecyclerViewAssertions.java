@@ -13,7 +13,6 @@ import static org.junit.Assert.assertTrue;
  * Created by ironman on 02/09/16.
  */
 public class RecyclerViewAssertions {
-
     public static ViewAssertion adapterItemCountEquals(int count) {
         return new ItemCountAssertion(ItemCountAssertion.MODE_EQUALS, count);
     }

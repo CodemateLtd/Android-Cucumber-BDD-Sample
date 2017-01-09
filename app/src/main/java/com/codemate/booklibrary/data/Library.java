@@ -39,7 +39,7 @@ public class Library {
         return results;
     }
 
-    public List<Book> findBooksByAuthor(String authorQuery) {
+    private List<Book> findBooksByAuthor(String authorQuery) {
         List<Book> results = new ArrayList<>();
 
         for (Book candidate : inventory) {
@@ -54,7 +54,7 @@ public class Library {
         return results;
     }
 
-    public List<Book> findBooksByTitle(String titleQuery) {
+    private List<Book> findBooksByTitle(String titleQuery) {
         List<Book> results = new ArrayList<>();
 
         for (Book candidate : inventory) {
@@ -69,7 +69,7 @@ public class Library {
         return results;
     }
 
-    public List<Book> findBooksByYear(String searchedYear) {
+    private List<Book> findBooksByYear(String searchedYear) {
         List<Book> results = new ArrayList<>();
 
         for (Book candidate : inventory) {

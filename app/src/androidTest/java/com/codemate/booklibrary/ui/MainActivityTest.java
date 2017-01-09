@@ -19,7 +19,10 @@ import static com.codemate.booklibrary.RecyclerViewAssertions.adapterItemCountEq
 import static com.codemate.booklibrary.RecyclerViewAssertions.adapterItemCountLowerThan;
 
 /**
- * Created by ironman on 02/09/16.
+ * Some really coarse UI tests.
+ *
+ * Check the MainPresenterTest for more specific tests that ensure correct books are
+ * returned.
  */
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {

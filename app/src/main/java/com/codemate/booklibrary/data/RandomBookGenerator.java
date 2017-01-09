@@ -9,8 +9,6 @@ import java.util.List;
  * Created by ironman on 02/09/16.
  */
 public class RandomBookGenerator {
-    private RandomBookGenerator() {}
-
     private static final String[] SUBJECTS = {
             "Chicken", "Pig", "Hippo", "Dinosaur", "Giraffe", "Orangutan",
             "Bat", "Lion", "Daddy", "Grandpa", "Donald Trump", "Coffee",
@@ -40,7 +38,7 @@ public class RandomBookGenerator {
      * @param howMany how many random books should the generator generate.
      * @return a list that has as many books as the parameter howMany specifies.
      */
-    public static List<Book> generate(int howMany) {
+    public List<Book> generate(int howMany) {
         List<Book> books = new ArrayList<>();
 
         for (int i = 0; i < howMany; i++) {
@@ -53,7 +51,7 @@ public class RandomBookGenerator {
     /**
      * Generates a random book.
      */
-    public static Book randomBook() {
+    public Book randomBook() {
         String title = randomTitle();
         String author = randomAuthor();
         Date date = randomDate();

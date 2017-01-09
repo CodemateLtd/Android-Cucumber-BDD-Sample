@@ -1,5 +1,6 @@
 package com.codemate.booklibrary.ui;
 
+import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,11 +10,14 @@ import android.support.v7.widget.SearchView;
 import com.codemate.booklibrary.data.Book;
 import com.codemate.booklibrary.data.Library;
 import com.codemate.booklibrary.R;
+import com.codemate.booklibrary.data.RandomBookGenerator;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MainView, SearchView.OnQueryTextListener {
-    private MainPresenter presenter;
+    @VisibleForTesting
+    MainPresenter presenter;
+
     private BookAdapter bookAdapter;
 
     @Override
@@ -23,8 +27,8 @@ public class MainActivity extends AppCompatActivity implements MainView, SearchV
 
         initializeViews();
 
-        presenter = new MainPresenter(this, new Library());
-        presenter.loadAllBooks();
+        presenter = new MainPresenter(this, new Library(), new RandomBookGenerator());
+        presenter.fetchBooks();
     }
 
     private void initializeViews() {

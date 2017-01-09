@@ -9,9 +9,12 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.sql.Date;
+import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.Matchers.anyString;
+import static java.util.Collections.singletonList;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -19,36 +22,40 @@ import static org.mockito.Mockito.when;
  * Created by ironman on 02/09/16.
  */
 public class MainPresenterTest {
+    private static final List<Book> DUMMY_BOOKS = Arrays.asList(
+            new Book("Sample book one", "John Doe", Date.valueOf("2000-10-25")),
+            new Book("Sample book two", "Jane Doe", Date.valueOf("2016-01-01")),
+            new Book("Sample book three", "Some One", Date.valueOf("2005-12-12"))
+    );
+
     @Mock
     private MainView mainView;
 
     @Mock
-    private Library library;
+    private RandomBookGenerator bookGenerator;
 
     private MainPresenter presenter;
-    private List<Book> randomBooks;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        presenter = new MainPresenter(mainView, library);
-        randomBooks = RandomBookGenerator.generate(5);
+        when(bookGenerator.generate(anyInt())).thenReturn(DUMMY_BOOKS);
+        presenter = new MainPresenter(mainView, new Library(), bookGenerator);
     }
 
     @Test
-    public void searchForBooks_ShowsThemInUI() {
-        when(library.search(anyString())).thenReturn(randomBooks);
-        presenter.searchForBooks("test_search");
+    public void searchForBooks_WhenSearchingByAuthorJohn_ShowsFirstBookInUI() {
+        presenter.fetchBooks();
+        presenter.searchForBooks("John");
 
-        verify(mainView).showBooks(randomBooks);
+        verify(mainView).showBooks(singletonList(DUMMY_BOOKS.get(0)));
     }
 
     @Test
-    public void loadAllBooks_ShowsThemInUI() {
-        when(library.getAllBooks()).thenReturn(randomBooks);
-        presenter.loadAllBooks();
+    public void fetchBooks_LoadsAll_AndShowsThemInUI() {
+        presenter.fetchBooks();
 
-        verify(mainView).showBooks(randomBooks);
+        verify(mainView).showBooks(DUMMY_BOOKS);
     }
 }
