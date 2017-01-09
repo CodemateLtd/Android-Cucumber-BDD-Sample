@@ -6,9 +6,9 @@
 
 This is a sample Android app that has BDD-style tests made using the Cucumber framework. The app acts like a library book search, allowing you to search for books by title, author or year.
 
-The feature file that has all functionality requirements that the application must fulfill is located [here](https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample/blob/master/app/src/test/resources/com.codemate.booklibrary/booksearch.feature).
-
 [Cucumber](https://cucumber.io/) is a BDD testing framework that allows people without programming background write specifications **that can be translated to unit test requirements almost automatically**.
+
+The feature file that has all functionality requirements that the application must fulfill is located [here](https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample/blob/master/app/src/test/resources/com.codemate.booklibrary/booksearch.feature).
 
 ## An example
 
