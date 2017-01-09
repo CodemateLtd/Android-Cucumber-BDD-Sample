@@ -11,7 +11,7 @@ import java.util.List;
 public class LibraryTest {
     @Test
     public void addMultipleBooks_PersistsThemInLibrary() {
-        List<Book> books = RandomBookGenerator.randomBooks(3);
+        List<Book> books = RandomBookGenerator.generate(3);
         Library library = new Library();
         library.addBooks(books);
 

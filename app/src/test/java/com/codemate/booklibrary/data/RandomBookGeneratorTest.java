@@ -14,7 +14,7 @@ import static org.junit.Assert.assertNotNull;
 public class RandomBookGeneratorTest {
     @Test
     public void generatingRandomBooks_ReturnsNonEmptyBookList() {
-        List<Book> books = RandomBookGenerator.randomBooks(15);
+        List<Book> books = RandomBookGenerator.generate(15);
 
         assertEquals(15, books.size());
 

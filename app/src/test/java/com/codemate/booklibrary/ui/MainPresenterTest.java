@@ -19,7 +19,6 @@ import static org.mockito.Mockito.when;
  * Created by ironman on 02/09/16.
  */
 public class MainPresenterTest {
-
     @Mock
     private MainView mainView;
 
@@ -32,14 +31,14 @@ public class MainPresenterTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+
         presenter = new MainPresenter(mainView, library);
-        randomBooks = RandomBookGenerator.randomBooks(5);
+        randomBooks = RandomBookGenerator.generate(5);
     }
 
     @Test
     public void searchForBooks_ShowsThemInUI() {
-        when(library.search(anyString()))
-                .thenReturn(randomBooks);
+        when(library.search(anyString())).thenReturn(randomBooks);
         presenter.searchForBooks("test_search");
 
         verify(mainView).showBooks(randomBooks);
@@ -47,8 +46,7 @@ public class MainPresenterTest {
 
     @Test
     public void loadAllBooks_ShowsThemInUI() {
-        when(library.getAllBooks())
-                .thenReturn(randomBooks);
+        when(library.getAllBooks()).thenReturn(randomBooks);
         presenter.loadAllBooks();
 
         verify(mainView).showBooks(randomBooks);

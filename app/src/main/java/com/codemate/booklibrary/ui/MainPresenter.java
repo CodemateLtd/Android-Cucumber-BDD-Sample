@@ -27,7 +27,7 @@ public class MainPresenter {
         // Populate the library with fake dummy data. In a real app
         // we would have an interactor that would fetch the books from
         // a real API.
-        List<Book> books = RandomBookGenerator.randomBooks(45);
+        List<Book> books = RandomBookGenerator.generate(45);
         library.addBooks(books);
 
         loadBooks(library.getAllBooks());

@@ -35,7 +35,12 @@ public class RandomBookGenerator {
             "Johnson", "Springsteen", "Kauffman", "Schmidt", "Jokinen"
     };
 
-    public static List<Book> randomBooks(int howMany) {
+    /**
+     * Generates multiple random books.
+     * @param howMany how many random books should the generator generate.
+     * @return a list that has as many books as the parameter howMany specifies.
+     */
+    public static List<Book> generate(int howMany) {
         List<Book> books = new ArrayList<>();
 
         for (int i = 0; i < howMany; i++) {
@@ -45,6 +50,9 @@ public class RandomBookGenerator {
         return books;
     }
 
+    /**
+     * Generates a random book.
+     */
     public static Book randomBook() {
         String title = randomTitle();
         String author = randomAuthor();
@@ -57,14 +65,14 @@ public class RandomBookGenerator {
         String subject = RandomUtils.randomFromArray(SUBJECTS);
         String secondWord = RandomUtils.randomFromArray(SECOND_WORDS);
 
-        return subject + " " + secondWord;
+        return String.format("%s %s", subject, secondWord);
     }
 
     private static String randomAuthor() {
         String firstName = RandomUtils.randomFromArray(FIRST_NAMES);
         String lastName = RandomUtils.randomFromArray(LAST_NAMES);
 
-        return firstName + " " + lastName;
+        return String.format("%s %s", firstName, lastName);
     }
 
     private static Date randomDate() {

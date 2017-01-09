@@ -34,7 +34,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'info.cukes:cucumber-java:1.2.4'
     testCompile 'info.cukes:cucumber-junit:1.2.4'
-    testCompile 'org.mockito:mockito-core:1.+'
+    testCompile 'org.mockito:mockito-core:2.5.5'
 
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:recyclerview-v7:25.0.1'

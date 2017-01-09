@@ -13,7 +13,6 @@ import com.codemate.booklibrary.R;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MainView, SearchView.OnQueryTextListener {
-
     private MainPresenter presenter;
     private BookAdapter bookAdapter;
 
