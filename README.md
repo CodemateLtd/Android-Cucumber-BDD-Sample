@@ -1,14 +1,12 @@
 # Behavior-Driven Development with Cucumber
 
-This is a sample Android app that has tests mostly written using the Cucumber framework. The app acts like a library book search, allowing you to search for books by title, author or year. **The test coverage is 97%**.
+This is a sample Android app that has tests mostly written using the Cucumber framework. The app acts like a library book search, allowing you to search for books by title, author or year.
 
-[Cucumber](https://cucumber.io/) is a BDD testing framework that allows people without programming background write specifications **that can be translated to unit tests almost automatically**.
-
-Writing tests turns more fun and it's no more a pain in the ass to write them first. It's also easier to specify the requirements.
+[Cucumber](https://cucumber.io/) is a BDD testing framework that allows people without programming background write specifications **that can be translated to unit test requirements almost automatically**.
 
 ## An example
 
-The Oulu City Library has an application for book management.
+The Springfield City Library has an application for book management.
 
 The application is working fine, but they don't have a search feature. For the first version of the search feature, there's only one thing to implement:
 
@@ -20,14 +18,13 @@ This translates to the following **Gherkin** syntax, which could be even written
 
 ```gherkin
 Feature: Book Search
-
     Scenario: Search books by author
-      Given there's a book called "Tips for horrible hangovers" written by "John Smith"
-        And there's a book called "Bananas and their many colors" written by "James Brown"
+      Given there's a book called "Tips for job interviews" written by "John Smith"
+        And there's a book called "Bananas and their many colors" written by "James Doe"
         And there's a book called "Mama look I'm a rock star" written by "John Smith"
       When an employee searches by author "John Smith"
       Then 2 books should be found
-        And Book 1 has the title "Tips for horrible hangovers"
+        And Book 1 has the title "Tips for job interviews"
         And Book 2 has the title "Mama look I'm a rock star"
 ```
 

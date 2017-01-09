@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-/**
- * Created by ironman on 01/09/16.
- */
 public class Library {
     private List<Book> inventory = new ArrayList<>();
 

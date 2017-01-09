@@ -2,9 +2,6 @@ package com.codemate.booklibrary.data;
 
 import java.util.Random;
 
-/**
- * Created by ironman on 02/09/16.
- */
 public class RandomUtils {
     private RandomUtils() {}
 

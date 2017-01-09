@@ -8,9 +8,6 @@ import com.codemate.booklibrary.data.RandomBookGenerator;
 
 import java.util.List;
 
-/**
- * Created by ironman on 02/09/16.
- */
 public class MainPresenter {
     private final MainView mainView;
     private final Library library;

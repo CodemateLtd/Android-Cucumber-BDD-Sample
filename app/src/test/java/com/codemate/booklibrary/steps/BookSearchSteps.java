@@ -25,9 +25,6 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-/**
- * Created by ironman on 01/09/16.
- */
 public class BookSearchSteps {
     private Library library = new Library();
     private List<Book> results = new ArrayList<>();
@@ -75,7 +72,7 @@ public class BookSearchSteps {
     @And("^Book (\\d+) should have the title \"([^\"]*)\"$")
     public void verifyBookAtPosition(int position, String title) throws Throwable {
         int realPosition = position - 1;
-        Assert.assertEquals(title, results.get(realPosition).getTitle());
+        assertEquals(title, results.get(realPosition).getTitle());
     }
 
     @And("^Books should be (.+)$")

@@ -18,9 +18,6 @@ import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-/**
- * Created by ironman on 02/09/16.
- */
 public class MainPresenterTest {
     private static final List<Book> DUMMY_BOOKS = Arrays.asList(
             new Book("Sample book one", "John Doe", Date.valueOf("2000-10-25")),

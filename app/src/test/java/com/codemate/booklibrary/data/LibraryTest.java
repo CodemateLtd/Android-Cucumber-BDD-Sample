@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import java.util.List;
 
-/**
- * Created by ironman on 02/09/16.
- */
 public class LibraryTest {
     @Test
     public void addMultipleBooks_PersistsThemInLibrary() {

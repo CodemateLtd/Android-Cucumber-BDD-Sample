@@ -14,9 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by ironman on 02/09/16.
- */
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
     private final SimpleDateFormat dateFormat;
     private List<Book> items = new ArrayList<>();

@@ -8,9 +8,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
-/**
- * Created by ironman on 02/09/16.
- */
 public class RandomBookGeneratorTest {
     @Test
     public void generatingRandomBooks_ReturnsNonEmptyBookList() {

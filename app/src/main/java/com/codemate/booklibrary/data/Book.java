@@ -2,9 +2,6 @@ package com.codemate.booklibrary.data;
 
 import java.util.Date;
 
-/**
- * Created by ironman on 01/09/16.
- */
 public class Book {
     private final String title;
     private final String author;

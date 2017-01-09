@@ -5,9 +5,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by ironman on 02/09/16.
- */
 public class RandomBookGenerator {
     private static final String[] SUBJECTS = {
             "Chicken", "Pig", "Hippo", "Dinosaur", "Giraffe", "Orangutan",
