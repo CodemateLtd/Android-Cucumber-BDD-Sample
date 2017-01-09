@@ -67,10 +67,10 @@ public class Library {
     }
 
     private List<Book> findBooksByYear(String searchedYear) {
+        Calendar candidateCalendar = Calendar.getInstance();
         List<Book> results = new ArrayList<>();
 
         for (Book candidate : inventory) {
-            Calendar candidateCalendar = Calendar.getInstance();
             candidateCalendar.setTime(candidate.getPublishDate());
 
             int candidateYear = candidateCalendar.get(Calendar.YEAR);
