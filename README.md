@@ -6,9 +6,7 @@ This is a sample Android app that has tests mostly written using the Cucumber fr
 
 ## An example
 
-The Springfield City Library has an application for book management.
-
-The application is working fine, but they don't have a search feature. For the first version of the search feature, there's only one thing to implement:
+The Springfield City Library needs a simple mobile app for searching their book collection while away from their computer. For the first version of the search feature, there's only one thing to implement:
 
 * the employees must be able to search for books by authors.
 
