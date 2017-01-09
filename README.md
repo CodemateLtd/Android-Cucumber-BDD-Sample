@@ -1,5 +1,7 @@
 # Behavior-Driven Development with Cucumber
 
+[![Build Status](https://travis-ci.org/CodemateLtd/Android-Cucumber-BDD-Sample.svg?branch=master)](https://travis-ci.org/CodemateLtd/Android-Cucumber-BDD-Sample) [![Coverage Status](https://coveralls.io/repos/github/CodemateLtd/Android-Cucumber-BDD-Sample/badge.svg?branch=master)](https://coveralls.io/github/CodemateLtd/Android-Cucumber-BDD-Sample?branch=master)
+
 ![Sample Video](https://raw.githubusercontent.com/CodemateLtd/Android-Cucumber-BDD-Sample/master/art/sample_video.gif)
 
 This is a sample Android app that has BDD-style tests made using the Cucumber framework. The app acts like a library book search, allowing you to search for books by title, author or year.
