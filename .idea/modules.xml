@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BookLibrary.iml" filepath="$PROJECT_DIR$/BookLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android-bdd-sample-using-cucumber.iml" filepath="$PROJECT_DIR$/android-bdd-sample-using-cucumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android-Cucumber-BDD-Sample.iml" filepath="$PROJECT_DIR$/Android-Cucumber-BDD-Sample.iml" />
+      <module fileurl="file://C:\Users\Ken\Documents\lumos\Android-Cucumber-BDD-Sample\BookLibrary.iml" filepath="C:\Users\Ken\Documents\lumos\Android-Cucumber-BDD-Sample\BookLibrary.iml" />
+      <module fileurl="file://C:\Users\Ken\Documents\lumos\Android-Cucumber-BDD-Sample\android-bdd-sample-using-cucumber.iml" filepath="C:\Users\Ken\Documents\lumos\Android-Cucumber-BDD-Sample\android-bdd-sample-using-cucumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
